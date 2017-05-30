@@ -48,7 +48,7 @@ class Plugin(object):
 
     def __init__(self, base_url=None):
         self._rules = {}  # function to list of rules
-        self.handle = int(sys.argv[1]) if sys.argv[1].isdigit() else -1
+        self.handle = int(sys.argv[1]) if str(sys.argv[1]).isdigit() else -1
         self.args = {}
         self.base_url = base_url
         if self.base_url is None:
